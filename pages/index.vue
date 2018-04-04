@@ -1,15 +1,13 @@
 <template>
-  <button @click="$store.commit('increment')">{{ counter }}</button>
+  <counter></counter>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import counterComponent from '../components/counter.vue'
 
 export default {
-  computed: {
-    ...mapState({
-        counter: state => state.counter,
-    })
+  components: {
+    "counter" : counterComponent,
   }
 };
 </script>
